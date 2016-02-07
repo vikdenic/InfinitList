@@ -306,7 +306,9 @@
 				9346ABBD1C67979D00736374 /* InfiniteListTests */,
 				9346ABA71C67979C00736374 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		9346ABA71C67979C00736374 /* Products */ = {
 			isa = PBXGroup;
