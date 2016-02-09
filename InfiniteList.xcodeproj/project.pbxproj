@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9346ABAA1C67979C00736374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ABA91C67979C00736374 /* AppDelegate.swift */; };
-		9346ABAC1C67979C00736374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ABAB1C67979C00736374 /* ViewController.swift */; };
+		9346ABAC1C67979C00736374 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ABAB1C67979C00736374 /* LoginViewController.swift */; };
 		9346ABAF1C67979C00736374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9346ABAD1C67979C00736374 /* Main.storyboard */; };
 		9346ABB11C67979C00736374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9346ABB01C67979C00736374 /* Assets.xcassets */; };
 		9346ABB41C67979C00736374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9346ABB21C67979C00736374 /* LaunchScreen.storyboard */; };
@@ -41,6 +41,9 @@
 		9346ACB21C67999000736374 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9346ABCD1C6798D800736374 /* libz.tbd */; };
 		9346ACB31C67999600736374 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9346ABCB1C6798CF00736374 /* libsqlite3.tbd */; };
 		9346ACB41C67999D00736374 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9346ABC91C6798BF00736374 /* SystemConfiguration.framework */; };
+		9346ACBD1C679EFD00736374 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ACBC1C679EFD00736374 /* Note.swift */; };
+		9346ACBE1C679EFD00736374 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ACBC1C679EFD00736374 /* Note.swift */; };
+		93DACE1E1C695B84006E3E52 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DACE1D1C695B84006E3E52 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +59,7 @@
 /* Begin PBXFileReference section */
 		9346ABA61C67979C00736374 /* InfiniteList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9346ABA91C67979C00736374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9346ABAB1C67979C00736374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9346ABAB1C67979C00736374 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9346ABAE1C67979C00736374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9346ABB01C67979C00736374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9346ABB31C67979C00736374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 		9346AC991C67997900736374 /* x264_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264_config.h; sourceTree = "<group>"; };
 		9346AC9B1C67997900736374 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
 		9346ACB61C679AFD00736374 /* InfiniteListTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "InfiniteListTests-Bridging-Header.h"; path = "../InfiniteList/InfiniteListTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		9346ACBC1C679EFD00736374 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		93DACE1D1C695B84006E3E52 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,8 +328,9 @@
 			isa = PBXGroup;
 			children = (
 				9346ABA91C67979C00736374 /* AppDelegate.swift */,
-				9346ABAB1C67979C00736374 /* ViewController.swift */,
 				9346ABAD1C67979C00736374 /* Main.storyboard */,
+				9346ACBF1C679F0300736374 /* Model */,
+				9346ACC01C679F0600736374 /* Controllers */,
 				9346ABB01C67979C00736374 /* Assets.xcassets */,
 				9346ABB21C67979C00736374 /* LaunchScreen.storyboard */,
 				9346ABB51C67979C00736374 /* Info.plist */,
@@ -718,6 +724,23 @@
 			name = Backendless;
 			sourceTree = "<group>";
 		};
+		9346ACBF1C679F0300736374 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9346ACBC1C679EFD00736374 /* Note.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9346ACC01C679F0600736374 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9346ABAB1C67979C00736374 /* LoginViewController.swift */,
+				93DACE1D1C695B84006E3E52 /* FeedViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -819,8 +842,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9346ABAC1C67979C00736374 /* ViewController.swift in Sources */,
+				9346ABAC1C67979C00736374 /* LoginViewController.swift in Sources */,
 				9346ABAA1C67979C00736374 /* AppDelegate.swift in Sources */,
+				93DACE1E1C695B84006E3E52 /* FeedViewController.swift in Sources */,
+				9346ACBD1C679EFD00736374 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9346ABBF1C67979D00736374 /* InfiniteListTests.swift in Sources */,
+				9346ACBE1C679EFD00736374 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1054,6 +1080,7 @@
 				9346ABC51C67979D00736374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9346ABC61C67979D00736374 /* Build configuration list for PBXNativeTarget "InfiniteListTests" */ = {
 			isa = XCConfigurationList;
@@ -1062,6 +1089,7 @@
 				9346ABC81C67979D00736374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
