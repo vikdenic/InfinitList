@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController {
 
   @IBOutlet var tableView: UITableView!
 
-//  var ownerId: String!
   var blurbs = [Blurb]()
 
   override func viewDidLoad() {
@@ -34,6 +33,24 @@ class ProfileViewController: UIViewController {
       print("Successfully retrieved: \(retrievedCollection)")
       self.blurbs = retrievedCollection.data as! [Blurb]
       self.tableView.reloadData()
+      }) { (fault) -> Void in
+        print("Server reported an error: \(fault)")
+    }
+  }
+
+  @IBAction func onLoggoutTapped(sender: AnyObject) {
+    backendless.userService.logout({ (object) -> Void in
+      self.navigationController?.popToRootViewControllerAnimated(false)
+      self.performSegueWithIdentifier("profileToLoginSegue", sender: self)
+      }) { (fault) -> Void in
+        print("Server reported an error: \(fault)")
+    }
+  }
+
+  @IBAction func onLogoutTapped(sender: AnyObject) {
+    backendless.userService.logout({ (object) -> Void in
+      self.performSegueWithIdentifier("profileToLoginSegue", sender: self)
+      self.navigationController?.popToRootViewControllerAnimated(true)
       }) { (fault) -> Void in
         print("Server reported an error: \(fault)")
     }

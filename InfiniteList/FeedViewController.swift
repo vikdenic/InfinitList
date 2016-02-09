@@ -23,6 +23,7 @@ class FeedViewController: UIViewController {
 
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
+    backendless.userService.setStayLoggedIn(true)
     retrieveBlurbs()
   }
 
@@ -76,13 +77,6 @@ class FeedViewController: UIViewController {
     alert.addTextFieldWithConfigurationHandler(nil)
 
     presentViewController(alert, animated: true, completion: nil)
-  }
-
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "feedToProfileSegue" {
-      let profileVC = segue.destinationViewController as! ProfileViewController
-//      profileVC.ownerId = backendless.userService.currentUser.objectId
-    }
   }
 }
 

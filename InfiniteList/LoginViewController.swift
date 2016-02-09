@@ -27,7 +27,9 @@ class LoginViewController: UIViewController {
     backendless.userService.registering(user,
       response: { (registeredUser) -> Void in
         print("User has been registered: \(registeredUser)")
-        self.dismissViewControllerAnimated(true, completion: nil)
+
+        //Still need to log the user in
+        self.loginUser()
       }) { (fault) -> Void in
         print("Server reported an error: \(fault)")
     }
