@@ -13,4 +13,5 @@ class Blurb: NSObject
   var objectId: String?
   var message: String?
   var authorEmail: String?
+  var ownerId: String?
 }
