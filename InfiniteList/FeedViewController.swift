@@ -55,6 +55,7 @@ class FeedViewController: UIViewController {
     blurb.authorEmail = backendless.userService.currentUser.email
     backendless.persistenceService.of(Blurb.ofClass()).save(blurb, response: { (savedBlurb) -> Void in
         print("successfully saved blurb")
+        self.retrieveBlurbs()
       }) { (fault) -> Void in
         print("Server reported an error: \(fault)")
     }
@@ -86,7 +87,9 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("feedCell")! as UITableViewCell
-    cell.textLabel?.text = self.blurbs[indexPath.row].message
+    let blurb = self.blurbs[indexPath.row]
+    cell.textLabel?.text = blurb.message
+    cell.detailTextLabel?.text = blurb.authorEmail
     return cell
   }
 }
