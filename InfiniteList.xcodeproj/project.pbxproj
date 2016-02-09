@@ -41,8 +41,8 @@
 		9346ACB21C67999000736374 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9346ABCD1C6798D800736374 /* libz.tbd */; };
 		9346ACB31C67999600736374 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9346ABCB1C6798CF00736374 /* libsqlite3.tbd */; };
 		9346ACB41C67999D00736374 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9346ABC91C6798BF00736374 /* SystemConfiguration.framework */; };
-		9346ACBD1C679EFD00736374 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ACBC1C679EFD00736374 /* Note.swift */; };
-		9346ACBE1C679EFD00736374 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ACBC1C679EFD00736374 /* Note.swift */; };
+		9346ACBD1C679EFD00736374 /* Blurb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ACBC1C679EFD00736374 /* Blurb.swift */; };
+		9346ACBE1C679EFD00736374 /* Blurb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346ACBC1C679EFD00736374 /* Blurb.swift */; };
 		93DACE1E1C695B84006E3E52 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DACE1D1C695B84006E3E52 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -253,8 +253,8 @@
 		9346AC991C67997900736374 /* x264_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264_config.h; sourceTree = "<group>"; };
 		9346AC9B1C67997900736374 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
 		9346ACB61C679AFD00736374 /* InfiniteListTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "InfiniteListTests-Bridging-Header.h"; path = "../InfiniteList/InfiniteListTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		9346ACBC1C679EFD00736374 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		93DACE1D1C695B84006E3E52 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		9346ACBC1C679EFD00736374 /* Blurb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blurb.swift; sourceTree = "<group>"; };
+		93DACE1D1C695B84006E3E52 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -727,7 +727,7 @@
 		9346ACBF1C679F0300736374 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9346ACBC1C679EFD00736374 /* Note.swift */,
+				9346ACBC1C679EFD00736374 /* Blurb.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -845,7 +845,7 @@
 				9346ABAC1C67979C00736374 /* LoginViewController.swift in Sources */,
 				9346ABAA1C67979C00736374 /* AppDelegate.swift in Sources */,
 				93DACE1E1C695B84006E3E52 /* FeedViewController.swift in Sources */,
-				9346ACBD1C679EFD00736374 /* Note.swift in Sources */,
+				9346ACBD1C679EFD00736374 /* Blurb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,7 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9346ABBF1C67979D00736374 /* InfiniteListTests.swift in Sources */,
-				9346ACBE1C679EFD00736374 /* Note.swift in Sources */,
+				9346ACBE1C679EFD00736374 /* Blurb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

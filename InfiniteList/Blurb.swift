@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Note: NSObject
+class Blurb: NSObject
 {
   var objectId: String?
   var message: String?

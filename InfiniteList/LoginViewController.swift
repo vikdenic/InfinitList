@@ -49,16 +49,4 @@ class LoginViewController: UIViewController {
   @IBAction func onLoginTapped(sender: AnyObject) {
     loginUser()
   }
-
-//  func createNewUserAndSaveNote() {
-//    let user: BackendlessUser = BackendlessUser()
-//    user.email = "trey@mail.com"
-//    user.password = "password"
-//    backendless.userService.registering(user)
-//
-//    let note = Note()
-//    note.message = "I'm in"
-//    note.authorEmail = user.email
-//    backendless.persistenceService.of(Note.ofClass()).save(note)
-//  }
 }

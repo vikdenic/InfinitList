@@ -193,10 +193,64 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KEE-He-q3y">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wlq-qx-dI3">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" id="840-97-l9E">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="840-97-l9E" id="tIB-Hh-J0h">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JRL-vS-YQ2" id="S0E-zf-orn"/>
+                                    <outlet property="delegate" destination="JRL-vS-YQ2" id="SBg-gg-4op"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wlq-qx-dI3" firstAttribute="leading" secondItem="KEE-He-q3y" secondAttribute="leadingMargin" constant="-20" id="BEC-UC-1Vp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wlq-qx-dI3" secondAttribute="trailing" constant="-20" id="KTJ-Jg-cyo"/>
+                            <constraint firstItem="JKK-c4-63E" firstAttribute="top" secondItem="Wlq-qx-dI3" secondAttribute="bottom" id="crW-kk-hjr"/>
+                            <constraint firstItem="Wlq-qx-dI3" firstAttribute="top" secondItem="KEE-He-q3y" secondAttribute="topMargin" id="lHy-Zi-PbS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Wlq-qx-dI3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="BEC-UC-1Vp"/>
+                                <exclude reference="KTJ-Jg-cyo"/>
+                                <exclude reference="lHy-Zi-PbS"/>
+                                <exclude reference="crW-kk-hjr"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Wlq-qx-dI3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="BEC-UC-1Vp"/>
+                                <include reference="KTJ-Jg-cyo"/>
+                                <include reference="lHy-Zi-PbS"/>
+                                <include reference="crW-kk-hjr"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="eET-c3-i3T"/>
+                    <navigationItem key="navigationItem" id="eET-c3-i3T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2vg-Q6-uNW">
+                            <connections>
+                                <action selector="onAddButtonTapped:" destination="JRL-vS-YQ2" id="j5V-Yy-Q05"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="Wlq-qx-dI3" id="Ofx-p0-Nru"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="feedToLoginSegue" id="deF-il-5Oj"/>
                     </connections>
                 </viewController>
